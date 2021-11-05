@@ -24,34 +24,42 @@ const posts = [
     {
         avatar: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/77/7717c0f435207763c19bb945273e44e8c3339f96_full.jpg',
         userName: 'I\'m so Kate',
-        data: '1 hour ago',
+        data: '1 Hour ago',
         postText: 'look how cutie is my picciPucci!',
-        pImg: 'https://picsum.photos/1025/1/200/300',
+        pImg: 'https://picsum.photos/id/1025/200/300',
         likes: 33,
     },
     {
-        avatar: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/77/7717c0f435207763c19bb945273e44e8c3339f96_full.jpg',
-        userName: 'I\'m so Kate',
-        data: '1 hour ago',
-        postText: 'look how cutie is my picciPucci!',
-        pImg: 'https://picsum.photos/1025/1/200/300',
-        likes: 33,
+        avatar: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/a1/a11ef80eb39a0938e9428b999ece7b06e538fddf_full.jpg',
+        userName: 'badAss Kicker',
+        data: '3 Days ago',
+        postText: 'this was a good dinner!',
+        pImg: 'https://picsum.photos/id/1003/200/300',
+        likes: -10,
     },
     {
-        avatar: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/77/7717c0f435207763c19bb945273e44e8c3339f96_full.jpg',
-        userName: 'I\'m so Kate',
-        data: '1 hour ago',
-        postText: 'look how cutie is my picciPucci!',
-        pImg: 'https://picsum.photos/1025/1/200/300',
-        likes: 33,
+        avatar: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/9f/9fecaebedd5542c5479fc02f2089ab59554f8214_full.jpg',
+        userName: 'Miss Kathrine',
+        data: '22 Minutes ago',
+        postText: 'My new Onlyfan post is out! I\'ve shoot it during my last vacation, Go checkin\' it and don\'t forget to give me a huge tip!',
+        pImg: 'https://picsum.photos/id/1083/200/300', 
+        likes: '18milaMiliardi',
     },
     {
-        avatar: 'https://cdn.cloudflare.steamstatic.com/steamcommunity/public/images/avatars/77/7717c0f435207763c19bb945273e44e8c3339f96_full.jpg',
-        userName: 'I\'m so Kate',
-        data: '1 hour ago',
-        postText: 'look how cutie is my picciPucci!',
-        pImg: 'https://picsum.photos/1025/1/200/300',
-        likes: 33,
+        avatar: 'https://pbs.twimg.com/profile_images/1432037317/ajeje_400x400.jpg',
+        userName: 'Ajeje Brazorf',
+        data: '17 Minutes ago',
+        postText: 'E\' veramente incredibile! oggi mi hanno fatto la multa sull\'autobus nonostante io avessi un biglietto, pluritimbrato sì, ma solo perché l\'avevo pagato di più!',
+        pImg: 'https://img2.liberoquotidiano.it/images/2020/02/21/225810560-6a8f9951-4c40-4161-a5bd-60860a0d9885.jpg',
+        likes: '125K',
+    },
+    {
+        avatar: 'https://media-assets.vanityfair.it/photos/614d7cdeec9a331d113d44df/master/pass/image73.jpg',
+        userName: 'Paolo Buonolis',
+        data: '12 Years ago',
+        postText: 'Spettacolare la chiamata che abbiamo registrato oggi per Tira&Molla, non posso darvi troppi dettagli, ma vi dico che ci hanno chiamato due fratelli dalla provincia di caserta, grandi esperti di ippica e arte casearia! Venerdì guardate la puntata, non ve ne pentirete!',
+        pImg: 'https://www.google.it/url?sa=i&url=https%3A%2F%2Fwww.youmovies.it%2F2021%2F04%2F01%2Fpaolo-bonolis-scherzo-video%2F&psig=AOvVaw1G8Gf7PatGkVK2MYDGBSBg&ust=1636205937424000&source=images&cd=vfe&ved=0CAsQjRxqFwoTCMi18KGsgfQCFQAAAAAdAAAAABAD',
+        likes: 'comunque troppe poche!',
     },
 ];
 
@@ -75,7 +83,7 @@ for (let i = 0; i < posts.length; i++) {
             </div>
             <div class="post__text">${postText}</div>
             <div class="post__image">
-                <img src="${}" alt="">
+                <img src="${pImg}" alt="">
             </div>
             <div class="post__footer">
                 <div class="likes js-likes">
@@ -86,13 +94,10 @@ for (let i = 0; i < posts.length; i++) {
                         </a>
                     </div>
                     <div class="likes__counter">
-                        Piace a <b id="like-counter-1" class="js-likes-counter">80</b> persone
+                        Piace a <b id="like-counter-1" class="js-likes-counter">${likes}</b> persone
                     </div>
                 </div> 
             </div>            
         </div>
     `;
 }
-
-// selezionare sequenzialmente ad ogni iterazione del loop, un oggetto dell'array e ottenere i valori delle sue propretà
-
